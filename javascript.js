@@ -6,9 +6,9 @@ function showCity() {
     let villes = document.getElementsByClassName('city');
     for (let i = 0; i < villes.length; i++) {
         if (nomVilleSelectionnee == villes[i].id) {
-            villes[i].style.display = "";
+            villes[i].style.display = " ";
             villes[i].style.width = "100%";
-            message.firstChild.nodeValue = "You selected: " + villes[i].id;
+            message.firstChild.nodeValue = "Vous avez choisi: " + villes[i].id;
 
         } else {
             villes[i].style.display = "none";
