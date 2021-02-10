@@ -1,13 +1,12 @@
-$(document).ready(function() {
-    showCity();
-});
 
-
-var villeCourante;
 var nomVilleSelectionnee;
 
 
 function showCity() {
+    
+    
+var nomVilleSelectionnee;
+
     // 1. Récupérer la valeur courante du menu 
     // Pour ça on va faire :
     let nomVilleSelectionnee = document.getElementById(ville - select).value;
