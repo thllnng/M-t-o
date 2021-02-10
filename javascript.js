@@ -1,15 +1,12 @@
 
-var nomVilleSelectionnee;
 
 
 function showCity() {
-    
-    
-var nomVilleSelectionnee;
+
 
     // 1. Récupérer la valeur courante du menu 
     // Pour ça on va faire :
-    let nomVilleSelectionnee = document.getElementById(ville - select).value;
+    let nomVilleSelectionnee = document.getElementById(ville-select).value;
 
     // 2. Récupérer la liste de toutes les div correspondant à une div de météo 
     // Pour ça on va faire :
