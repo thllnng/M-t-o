@@ -106,3 +106,22 @@
             #Anvers div:nth-child(2) {
                 padding: 0px 0px 0px 10px;
             }
+            /* horloge */
+            
+            div#horloge {
+                right: 30px;
+                left: -200px;
+                top: 200px;
+                background-color: rgba(0, 0, 0, 1);
+                color: #FFF;
+                text-align: center;
+            }
+            
+            .horl {
+                justify-content: flex-start;
+                position: relative;
+            }
+            
+            .horl div {
+                border: #888;
+            }
