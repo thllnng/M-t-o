@@ -14,7 +14,7 @@ function showCity() {
 
     // 3. Parcourir la liste des div et cacher celles qui ne sont pas sélectionnées.
     // TODO : definir l : la taille max de votre tableau cities
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < cities.length; i++) {
         if (cities[i].id == nomVilleSelectionnee) {
 
             ELEMENT.style.display = "nomVilleSelectionnee"; // garder l'element visible -> ELEMENT.style.display= "none";
