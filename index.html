@@ -45,7 +45,7 @@
 
                 </form>
             </div>
-            
+
 
             <div class="flex">
 
@@ -115,7 +115,7 @@
 
                 <script type="text/javascript">
                     (function showCity() {
-    
+
                         let message = document.querySelector('#label');
                         let nomVilleSelectionnee = document.getElementById('ville').value;
                         apiCall(nomVilleSelectionnee);
@@ -125,7 +125,7 @@
                                 villes[i].style.display = " ";
                                 villes[i].style.width = "100%";
                                 message.firstChild.nodeValue = "Vous avez choisi: " + villes[i].id;
-    
+
                             } else {
                                 villes[i].style.display = "none";
                             }
