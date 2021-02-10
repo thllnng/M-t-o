@@ -14,8 +14,6 @@
 </head>
 
 
-
-
 <body>
 
 
@@ -38,7 +36,7 @@
                             <option value="">--Choisissez une ville--</option>
                             <option value="Lyon">Lyon</option>
                             <option value="Anvers">Anvers</option>
-                            <option value="Marseile">Marseille</option>
+                            <option value="Marseille">Marseille</option>
                        </select>
                     </p>
                     <p id="label">Vous avez choisi: </p>
@@ -48,95 +46,76 @@
 
             <div class="flex">
 
-                <div class="city">
-                    <div id="Lyon">
-                        <!-- widget meteo -->
-                        <div id="widget_9a4bd70e6a5259c701e4077fc4da83c7">
-                            <span id="Lyo">Lyon</span>
-                            <span id="l_9a4bd70e6a5259c701e4077fc4da83c7"><a href="http://www.mymeteo.info/r/accueil_ak">www.my-meteo.com</a></span>
-                            <script type="text/javascript">
-                                (function() {
-                                    var my = document.createElement("script");
-                                    my.type = "text/javascript";
-                                    my.async = true;
-                                    my.src = "https://services.my-meteo.com/widget/js_design?ville=237&format=grand-rectangle&nb_jours=1&coins&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=0&masque=5&x=300&y=128&d=0&id=9a4bd70e6a5259c701e4077fc4da83c7";
-                                    var z = document.getElementsByTagName("script")[0];
-                                    z.parentNode.insertBefore(my, z);
-                                })();
-                            </script>
-                        </div>
-                        <!-- widget meteo -->
-                    </div>
-                </div>
+                <div class="city" id="Lyon">
 
-                <div class="city">
-                    <div id="Anvers">
-                        <!-- widget meteo -->
-                        <div id="widget_e37032f5c9ebff302f64dc6022508240">
-                            <span id="Anv">Anvers</span>
-                            <span id="l_e37032f5c9ebff302f64dc6022508240"><a href="http://www.mymeteo.info/r/accueil_ak">https://www.my-meteo.com</a></span>
-                            <script type="text/javascript">
-                                (function() {
-                                    var my = document.createElement("script");
-                                    my.type = "text/javascript";
-                                    my.async = true;
-                                    my.src = "https://services.my-meteo.com/widget/js_design?ville=82&format=grand-rectangle&nb_jours=1&coins&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=0&masque=5&x=300&y=128&d=0&id=e37032f5c9ebff302f64dc6022508240";
-                                    var z = document.getElementsByTagName("script")[0];
-                                    z.parentNode.insertBefore(my, z);
-                                })();
-                            </script>
-                        </div>
-                        <!-- widget meteo -->
-                    </div>
-                </div>
-
-                <div class="city">
-                    <div id="Marseille">
-                        <!-- widget meteo -->
-                        <div id="widget_e0ef5adf3271b7b45df2a93c54d433e3">
-                            <span id="Mar">Marseille</span>
-                            <span id="l_e0ef5adf3271b7b45df2a93c54d433e3"><a href="http://www.mymeteo.info/r/accueil_ak">https://www.my-meteo.com</a></span>
-                            <script type="text/javascript">
-                                (function() {
-                                    var my = document.createElement("script");
-                                    my.type = "text/javascript";
-                                    my.async = true;
-                                    my.src = "https://services.my-meteo.com/widget/js_design?ville=239&format=grand-rectangle&nb_jours=1&coins&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=0&masque=5&x=300&y=128&d=0&id=e0ef5adf3271b7b45df2a93c54d433e3";
-                                    var z = document.getElementsByTagName("script")[0];
-                                    z.parentNode.insertBefore(my, z);
-                                })();
-                            </script>
-                        </div>
-                        <!-- widget meteo -->
-                    </div>
+                    <!-- widget meteo -->
+                    <span id="widget_9a4bd70e6a5259c701e4077fc4da83c7">
+                        <span id="Lyo"></span>
+                    <span id="l_9a4bd70e6a5259c701e4077fc4da83c7"><a href="http://www.mymeteo.info/r/accueil_ak">www.my-meteo.com</a></span>
+                    <script type="text/javascript">
+                        (function() {
+                            var my = document.createElement("script");
+                            my.type = "text/javascript";
+                            my.async = true;
+                            my.src = "https://services.my-meteo.com/widget/js_design?ville=237&format=grand-rectangle&nb_jours=1&coins&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=0&masque=5&x=300&y=128&d=0&id=9a4bd70e6a5259c701e4077fc4da83c7";
+                            var z = document.getElementsByTagName("script")[0];
+                            z.parentNode.insertBefore(my, z);
+                        })();
+                    </script>
+                    </span>
+                    <!-- widget meteo -->
                 </div>
 
 
-                <script type="text/javascript">
-                    (function showCity() {
+                <div class="city" id="Anvers">
 
-                        let message = document.querySelector('#label');
-                        let nomVilleSelectionnee = document.getElementById('ville').value;
-                        apiCall(nomVilleSelectionnee);
-                        let villes = document.getElementsByClassName('city');
-                        for (let i = 0; i < villes.length; i++) {
-                            if (nomVilleSelectionnee == villes[i].id) {
-                                villes[i].style.display = " ";
-                                villes[i].style.width = "100%";
-                                message.firstChild.nodeValue = "Vous avez choisi: " + villes[i].id;
+                    <!-- widget meteo -->
+                    <span id="widget_e37032f5c9ebff302f64dc6022508240">
+                        <span id="Anv"></span>
+                    <span id="l_e37032f5c9ebff302f64dc6022508240"><a href="http://www.mymeteo.info/r/accueil_ak">https://www.my-meteo.com</a></span>
+                    <script type="text/javascript">
+                        (function() {
+                            var my = document.createElement("script");
+                            my.type = "text/javascript";
+                            my.async = true;
+                            my.src = "https://services.my-meteo.com/widget/js_design?ville=82&format=grand-rectangle&nb_jours=1&coins&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=0&masque=5&x=300&y=128&d=0&id=e37032f5c9ebff302f64dc6022508240";
+                            var z = document.getElementsByTagName("script")[0];
+                            z.parentNode.insertBefore(my, z);
+                        })();
+                    </script>
+                    </span>
+                    <!-- widget meteo -->
 
-                            } else {
-                                villes[i].style.display = "none";
-                            }
-                        }
-                    })();
-                </script>
+                </div>
 
+                <div class="city" id="Marseille">
+
+                    <!-- widget meteo -->
+                    <span id="widget_e0ef5adf3271b7b45df2a93c54d433e3">
+                        <span id="Mrs"></span>
+                    <span id="l_e0ef5adf3271b7b45df2a93c54d433e3"><a href="http://www.mymeteo.info/r/accueil_ak">https://www.my-meteo.com</a></span>
+                    <script type="text/javascript">
+                        (function() {
+                            var my = document.createElement("script");
+                            my.type = "text/javascript";
+                            my.async = true;
+                            my.src = "https://services.my-meteo.com/widget/js_design?ville=239&format=grand-rectangle&nb_jours=1&coins&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=0&masque=5&x=300&y=128&d=0&id=e0ef5adf3271b7b45df2a93c54d433e3";
+                            var z = document.getElementsByTagName("script")[0];
+                            z.parentNode.insertBefore(my, z);
+                        })();
+                    </script>
+                    </span>
+                    <!-- widget meteo -->
+
+                </div>
             </div>
+
 
         </div>
 
     </div>
+
+
 
     <div id="earth">
         <img id="img_earth" src="xplanet_earth.png" alt="" />
