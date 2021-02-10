@@ -7,7 +7,7 @@
 
 
     <meta charset="UTF-8" />
-    <meta name="Author" lang="fr" content="Thiella" />
+
     <script type="text/javascript" src="javascript.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -28,12 +28,22 @@
         <div id="meteo">
 
 
-            <select onchange="showCity()" id="ville-select">
-                <option value="">--Choisissez une ville à afficher--</option>
-                <option value="Lyon">Lyon</option>
-                <option value="Anvers">Anvers</option>
-                <option value="Marseile">Marseille</option>
-            </select>
+
+            <div id="ville-select" onchange="showCity()">
+                <form method="POST" action=" ">
+                    <p>
+                        <select name="ville" id="ville">
+
+                            <option value="">--Choisissez une ville à afficher--</option>
+                            <option value="Lyon">Lyon</option>
+                            <option value="Anvers">Anvers</option>
+                            <option value="Marseile">Marseille</option>
+                       </select>
+                    </p>
+                    <p id="label">You selected: </p>
+
+                </form>
+            </div>
 
 
             <div class="flex">
@@ -110,10 +120,11 @@
     <div id="earth">
         <img id="img_earth" src="xplanet_earth.png" alt="" />
     </div>
-
-    <div class="finn">
-        <p>Thiella NIANG Numéro Etudiant : 11815334</p>
-    </div>
+    <footer>
+        <div class="finn">
+            <p>Thiella NIANG Numéro Etudiant : 11815334</p>
+        </div>
+    </footer>
 
 </body>
 
